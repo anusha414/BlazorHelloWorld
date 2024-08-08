@@ -3,7 +3,7 @@ name: Build and Deploy Blazor WebAssembly(client side)
 on:
   push:
     branches:
-      - master
+      - feature1
   workflow_dispatch:
 
 jobs:
