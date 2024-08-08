@@ -1,17 +1,10 @@
-@namespace BlazorHelloWorld
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Microsoft.AspNetCore.Components.Web;
+using BlazorHelloWorld; // Ensure this matches the namespace in App.razor
 
-@using Microsoft.AspNetCore.Components.WebAssembly.Hosting
-@using Microsoft.AspNetCore.Components
-@using Microsoft.AspNetCore.Components.Web
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
 
-<Router AppAssembly="@typeof(App).Assembly">
-  <Found Context="routeData">
-    <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
-    <FocusOnNavigate RouteData="@routeData" Selector="h1" />
-  </Found>
-  <NotFound>
-    <LayoutView Layout="@typeof(MainLayout)">
-      <p>Sorry, there's nothing at this address.</p>
-    </LayoutView>
-  </NotFound>
-</Router>
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+await builder.Build().RunAsync();
