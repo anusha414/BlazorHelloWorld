@@ -19,7 +19,7 @@ jobs:
         dotnet-version: '7.0.x'  # Adjust version if needed
 
     - name: Restore dependencies
-      run: dotnet restore BlazorHelloWorld/HelloBlazor.csproj
+      run: dotnet restore
 
     - name: Build
       run: dotnet build BlazorHelloWorld/HelloBlazor.csproj --configuration Release
