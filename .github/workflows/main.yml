@@ -18,6 +18,8 @@ jobs:
       with:
         dotnet-version: '7.0.x'  # Adjust version if needed
 
+    - run: dotnet clean
+
     - name: Restore dependencies
       run: dotnet restore
 
