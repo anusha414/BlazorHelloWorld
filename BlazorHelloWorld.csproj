@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <RootNamespace>BlazorHelloWorld</RootNamespace> <!-- This should match your namespace -->
+    <RootNamespace>BlazorHelloWorld</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
