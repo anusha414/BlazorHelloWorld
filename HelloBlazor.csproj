@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <OutputType>Exe</OutputType>
-    <RootNamespace>HelloBlazor</RootNamespace>
+    <RootNamespace>BlazorHelloWorld</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
